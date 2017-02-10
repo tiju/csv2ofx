@@ -43,6 +43,11 @@ from . import utils
 from .ofx import OFX
 from .qif import QIF
 
+try:
+    FileNotFoundError
+except NameError:
+    FileNotFoundError = IOError
+
 
 parser = ArgumentParser(  # pylint: disable=invalid-name
     description="description: csv2ofx converts a csv file to ofx and qif",
