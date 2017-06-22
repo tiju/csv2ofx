@@ -128,7 +128,7 @@ class OFX(Content):
             ...     'Category': 'Checking', 'Account Name': 'account'}
             >>> OFX(mapping, def_type='CHECKING').transaction_data(trxn) == {
             ...     'account_id': 'e268443e43d93dab7ebef303bbe9642f',
-            ...     'account': 'account', 'currency': 'USD',
+            ...     'account': 'account', 'currency': 'GBP',
             ...     'account_type': 'CHECKING', 'shares': Decimal('0'),
             ...     'is_investment': False, 'bank': 'account',
             ...     'split_account_type': 'CHECKING',
@@ -177,9 +177,9 @@ class OFX(Content):
 
         Examples:
             >>> kwargs = {'start': dt(2012, 1, 1), 'end': dt(2012, 2, 1)}
-            >>> akwargs = {'currency': 'USD', 'bank_id': 1, 'account_id': 1, \
+            >>> akwargs = {'currency': 'GBP', 'bank_id': 1, 'account_id': 1, \
 'account_type': 'CHECKING'}
-            >>> start = '<STMTRS><CURDEF>USD</CURDEF><BANKACCTFROM><BANKID>1\
+            >>> start = '<STMTRS><CURDEF>GBP</CURDEF><BANKACCTFROM><BANKID>1\
 </BANKID><ACCTID>1</ACCTID><ACCTTYPE>CHECKING</ACCTTYPE></BANKACCTFROM>\
 <BANKTRANLIST><DTSTART>20120101</DTSTART><DTEND>20120201</DTEND>'
             >>> result = OFX(**kwargs).account_start(**akwargs)
@@ -297,10 +297,10 @@ class OFX(Content):
             (str): the start of an OFX transfer
 
         Examples:
-            >>> kwargs = {'currency': 'USD', 'date': dt(2012, 1, 15), \
+            >>> kwargs = {'currency': 'GBP', 'date': dt(2012, 1, 15), \
 'bank_id': 1, 'account_id': 1, 'account_type': 'CHECKING', 'amount': 100, \
 'id': 'jbaevf'}
-            >>> trxn = '<INTRARS><CURDEF>USD</CURDEF><SRVRTID>jbaevf</SRVRTID>\
+            >>> trxn = '<INTRARS><CURDEF>GBP</CURDEF><SRVRTID>jbaevf</SRVRTID>\
 <XFERINFO><TRNAMT>100.00</TRNAMT><BANKACCTFROM><BANKID>1</BANKID><ACCTID>1\
 </ACCTID><ACCTTYPE>CHECKING</ACCTTYPE></BANKACCTFROM>'
             >>> result = OFX().transfer(**kwargs)

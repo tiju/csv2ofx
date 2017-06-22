@@ -83,7 +83,7 @@ class QIF(Content):
             ...     'Category': 'Checking', 'Account Name': 'account'}
             >>> QIF(mapping, def_type='Bank').transaction_data(tr) == {
             ...     'account_id': 'e268443e43d93dab7ebef303bbe9642f',
-            ...     'account': 'account', 'currency': 'USD',
+            ...     'account': 'account', 'currency': 'GBP',
             ...     'account_type': 'Bank', 'shares': Decimal('0'),
             ...     'is_investment': False, 'bank': 'account',
             ...     'split_memo': 'description notes', 'split_account_id': None,

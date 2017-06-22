@@ -6,7 +6,7 @@ mapping = {
     'has_header': True,
     'is_split': False,
     'bank': 'Bank Name',
-    'currency': 'USD',
+    'currency': 'GBP',
     'delimiter': ',',
     'account': itemgetter('Field'),
     'account_id': itemgetter('Field'),

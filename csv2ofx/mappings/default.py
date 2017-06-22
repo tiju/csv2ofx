@@ -6,7 +6,7 @@ mapping = {
     'has_header': True,
     'is_split': False,
     'bank': 'Bank',
-    'currency': 'USD',
+    'currency': 'GBP',
     'delimiter': ',',
     'account': itemgetter('Account'),
     'date': itemgetter('Date'),

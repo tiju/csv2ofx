@@ -198,7 +198,7 @@ class Content(object):  # pylint: disable=too-many-instance-attributes
             ...     'bank_id': 'e268443e43d93dab7ebef303bbe9642f',
             ...     'account': 'account',
             ...     'split_account_id': '195917574edc9b6bbeb5be9785b6a479',
-            ...     'shares': Decimal('0'), 'payee': 'payee', 'currency': 'USD',
+            ...     'shares': Decimal('0'), 'payee': 'payee', 'currency': 'GBP',
             ...     'bank': 'account', 'class': None, 'is_investment': False,
             ...     'date': datetime.datetime(2010, 6, 12, 0, 0),
             ...     'price': Decimal('0'), 'symbol': '', 'action': '',
@@ -246,7 +246,7 @@ class Content(object):  # pylint: disable=too-many-instance-attributes
 
         return {
             'date': parse(date),
-            'currency': self.get('currency', trxn, 'USD'),
+            'currency': self.get('currency', trxn, 'GBP'),
             'shares': shares,
             'symbol': symbol,
             'price': price,
